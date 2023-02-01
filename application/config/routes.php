@@ -52,3 +52,66 @@ defined('BASEPATH') or exit('No direct script access allowed');
 $route['default_controller'] = 'AppController/index';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+// BUKU
+$route['buku'] = "BukuController/index";
+$route['buku/add'] = "BukuController/add";
+$route['buku/do_add'] = "BukuController/do_add";
+$route['buku/detail/(:any)'] = "BukuController/detail/$1";
+$route['buku/edit/(:any)'] = "BukuController/edit/$1";
+$route['buku/do_edit/(:any)'] = "BukuController/do_edit/$1";
+$route['buku/delete'] = "BukuController/delete";
+
+// KATEGORI BUKU
+$route['kategori_buku'] = "BukuController/category_index";
+$route['kategori_buku/add'] = "BukuController/category_add";
+$route['kategori_buku/do_add'] = "BukuController/category_do_add";
+$route['kategori_buku/detail/(:any)'] = "BukuController/category_detail/$1";
+$route['kategori_buku/edit/(:any)'] = "BukuController/category_edit/$1";
+$route['kategori_buku/do_edit/(:any)'] = "BukuController/category_do_edit/$1";
+$route['kategori_buku/delete'] = "BukuController/category_delete";
+
+// LEMARI
+$route['lemari'] = "LemariController/index";
+$route['lemari/add'] = "LemariController/add";
+$route['lemari/do_add'] = "LemariController/do_add";
+$route['lemari/detail/(:any)'] = "LemariController/detail/$1";
+$route['lemari/edit/(:any)'] = "LemariController/edit/$1";
+$route['lemari/do_edit/(:any)'] = "LemariController/do_edit/$1";
+$route['lemari/delete'] = "LemariController/delete";
+
+// PEGAWAI
+$route['pegawai'] = "PegawaiController/index";
+$route['pegawai/add'] = "PegawaiController/add";
+$route['pegawai/do_add'] = "PegawaiController/do_add";
+$route['pegawai/detail/(:any)'] = "PegawaiController/detail/$1";
+$route['pegawai/edit/(:any)'] = "PegawaiController/edit/$1";
+$route['pegawai/do_edit/(:any)'] = "PegawaiController/do_edit/$1";
+$route['pegawai/delete'] = "PegawaiController/delete";
+
+// PETA
+$route['peta'] = "PetaController/index";
+$route['peta/add'] = "PetaController/add";
+$route['peta/do_add'] = "PetaController/do_add";
+$route['peta/detail/(:any)'] = "PetaController/detail/$1";
+$route['peta/edit/(:any)'] = "PetaController/edit/$1";
+$route['peta/do_edit/(:any)'] = "PetaController/do_edit/$1";
+$route['peta/delete'] = "PetaController/delete";
+
+// KATEGORI PETA
+$route['kategori_peta'] = "PetaController/category_index";
+$route['kategori_peta/add'] = "PetaController/category_add";
+$route['kategori_peta/do_add'] = "PetaController/category_do_add";
+$route['kategori_peta/detail/(:any)'] = "PetaController/category_detail/$1";
+$route['kategori_peta/edit/(:any)'] = "PetaController/category_edit/$1";
+$route['kategori_peta/do_edit/(:any)'] = "PetaController/category_do_edit/$1";
+$route['kategori_peta/delete'] = "PetaController/category_delete";
+
+// JABATAN
+$route['jabatan'] = "JabatanController/index";
+$route['jabatan/add'] = "JabatanController/add";
+$route['jabatan/do_add'] = "JabatanController/do_add";
+$route['jabatan/detail/(:any)'] = "JabatanController/detail/$1";
+$route['jabatan/edit/(:any)'] = "JabatanController/edit/$1";
+$route['jabatan/do_edit/(:any)'] = "JabatanController/do_edit/$1";
+$route['jabatan/delete'] = "JabatanController/delete";
