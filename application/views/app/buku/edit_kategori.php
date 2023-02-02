@@ -25,11 +25,11 @@
         <div class="col-7">
           <div class="card">
             <div class="card-body">
-              <form action="#!" method="post">
+              <form action="<?= base_url('kategori_buku/do_add') . $kategori_buku['id'] ?>" method="post">
 
                 <div class="form-group">
                   <label for="nama_kategori">Nama Kategori</label>
-                  <input type="text" class="form-control" id="nama_kategori" name="nama_kategori" value="<?= $buku['nama_kategori'] ?>">
+                  <input type="text" class="form-control" id="nama_kategori" name="nama_kategori" value="<?= $kategori_buku['nama_kategori'] ?>">
                 </div>
 
                 <div class="form-group">

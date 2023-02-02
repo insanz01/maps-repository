@@ -25,10 +25,10 @@
         <div class="col-7">
           <div class="card">
             <div class="card-body">
-              <form action="#!" method="post" enctype="multipart/form-data">
+              <form action="<?= base_url("buku/do_add") ?>" method="post" enctype="multipart/form-data">
                 <div class="form-group">
                   <label for="kode_buku">Kode Buku</label>
-                  <input type="text" class="form-control" id="kode_buku" name="kode_buku" readonly>
+                  <input type="text" class="form-control" id="kode_buku" name="kode_buku" value="<?= $buku['kode_buku'] ?>" readonly>
                 </div>
   
                 <div class="form-group">
@@ -39,16 +39,18 @@
                 <div class="form-group">
                   <label for="kode_kategori_buku">Pilih Kategori Buku</label>
                   <select name="kode_kategori_buku" id="kode_kategori_buku" class="form-control">
-                    <option value="baru">Baru</option>
-                    <option value="lama">Lama</option>
+                    <?php foreach($kategori_buku as $data): ?>
+                      <option value="<?= $data['id'] ?>"><?= $data['nama_kategori'] ?></option>
+                    <?php endforeach; ?>
                   </select>
                 </div>
   
                 <div class="form-group">
                   <label for="kode_lemari_buku">Pilih Lemari Arsip</label>
                   <select name="kode_lemari_buku" id="kode_lemari_buku" class="form-control">
-                    <option value="1">Lemari 1</option>
-                    <option value="2">Lemari 2</option>
+                    <?php foreach($lemari as $data): ?>
+                      <option value="<?= $data['id'] ?>"><?= $data['nama_lemari'] ?></option>
+                    <?php endforeach; ?>
                   </select>
                 </div>
   

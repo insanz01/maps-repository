@@ -25,7 +25,7 @@
         <div class="col-7">
           <div class="card">
             <div class="card-body">
-              <form action="#!" method="post" enctype="multipart/form-data">
+              <form action="<?= base_url("peta/do_edit/") . $peta['id'] ?>" method="post" enctype="multipart/form-data">
                 <div class="form-group">
                   <label for="kode_peta">Kode Peta</label>
                   <input type="text" class="form-control" id="kode_peta" name="kode_peta" value="<?= $peta['kode_peta'] ?>" readonly>
@@ -39,16 +39,18 @@
                 <div class="form-group">
                   <label for="kode_kategori_peta">Pilih Kategori Peta</label>
                   <select name="kode_kategori_peta" id="kode_kategori_peta" class="form-control">
-                    <option value="baru">Baru</option>
-                    <option value="lama">Lama</option>
+                    <?php foreach($kategori_peta as $data): ?>
+                      <option value="<?= $data['id'] ?>" <?= ($data['id'] == $peta['kode_kategori_peta']) ? "selected" : "" ?>><?= $data['nama_kategori'] ?></option>
+                    <?php endforeach; ?>
                   </select>
                 </div>
   
                 <div class="form-group">
                   <label for="kode_lemari_peta">Pilih Lemari Arsip</label>
                   <select name="kode_lemari_peta" id="kode_lemari_peta" class="form-control">
-                    <option value="1">Lemari 1</option>
-                    <option value="2">Lemari 2</option>
+                    <?php foreach($lemari as $data): ?>
+                      <option value="<?= $data['id'] ?>" <?= ($data['id'] == $peta['kode_lemari_peta']) ? "selected" : "" ?>><?= $data['nama_lemari'] ?></option>
+                    <?php endforeach; ?>
                   </select>
                 </div>
   

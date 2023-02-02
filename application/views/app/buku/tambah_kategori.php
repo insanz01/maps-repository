@@ -25,7 +25,7 @@
         <div class="col-7">
           <div class="card">
             <div class="card-body">
-              <form action="#!" method="post">
+              <form action="<?= base_url('kategori_buku/do_add') ?>" method="post">
 
                 <div class="form-group">
                   <label for="nama_kategori">Nama Kategori</label>

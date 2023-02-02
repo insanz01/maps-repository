@@ -189,6 +189,26 @@
         "autoWidth": false,
       });
 
+      $('.table-print').DataTable({
+        "lengthChange": false,
+        "responsive": true,
+        "autoWidth": false,
+        "paging": true,
+        "info": true,
+        dom: 'Bfrtip',
+        buttons: [{
+            extend: 'print',
+            text: 'Cetak / Print',
+            title: 'Laporan',
+          },
+          {
+            extend: 'excel',
+            text: 'Export Excel',
+            messageTop: 'The information in this table is copyright to Sirius Cybernetics Corp.'
+          },
+        ]
+      });
+
       $('#tabel-print').DataTable({
         "lengthChange": false,
         "responsive": true,

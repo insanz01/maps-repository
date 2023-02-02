@@ -39,16 +39,18 @@
                 <div class="form-group">
                   <label for="kode_kategori_buku">Pilih Kategori Buku</label>
                   <select name="kode_kategori_buku" id="kode_kategori_buku" class="form-control">
-                    <option value="baru">Baru</option>
-                    <option value="lama">Lama</option>
+                    <?php foreach($kategori_buku as $data): ?>
+                      <option value="<?= $data['id'] ?>" <?= ($data['id'] == $peta['kode_kategori_buku']) ? "selected" : "" ?>><?= $data['nama_kategori'] ?></option>
+                    <?php endforeach; ?>
                   </select>
                 </div>
   
                 <div class="form-group">
                   <label for="kode_lemari_buku">Pilih Lemari Arsip</label>
                   <select name="kode_lemari_buku" id="kode_lemari_buku" class="form-control">
-                    <option value="1">Lemari 1</option>
-                    <option value="2">Lemari 2</option>
+                    <?php foreach($lemari as $data): ?>
+                      <option value="<?= $data['id'] ?>" <?= ($data['id'] == $peta['kode_lemari_peta']) ? "selected" : "" ?>><?= $data['nama_lemari'] ?></option>
+                    <?php endforeach; ?>
                   </select>
                 </div>
   

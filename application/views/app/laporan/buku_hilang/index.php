@@ -23,7 +23,7 @@
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <table class="table">
+          <table class="table table-print">
             <thead>
               <th>#</th>
               <th>Tanggal</th>

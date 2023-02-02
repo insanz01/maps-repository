@@ -25,7 +25,12 @@
         <div class="col-7">
           <div class="card">
             <div class="card-body">
-              <form action="#!" method="post" enctype="multipart/form-data">
+              <form action="<?= base_url("lemari/do_edit/") . $lemari['id'] ?>" method="post" enctype="multipart/form-data">
+
+                <div class="form-group">
+                  <label for="kode_lemari">Kode Lemari</label>
+                  <input type="text" class="form-control" id="kode_lemari" name="kode_lemari" value="<?= $lemari['kode_lemari'] ?>" readonlhy>
+                </div>
 
                 <div class="form-group">
                   <label for="nama_lemari">Nama Lemari</label>

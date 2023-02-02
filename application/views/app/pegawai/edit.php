@@ -5,7 +5,7 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1 class="m-0 text-dark">Tambah Kategori Peta</h1>
+          <h1 class="m-0 text-dark">Edit Pegawai</h1>
         </div><!-- /.col -->
         <div class="col-sm-6">
           <!-- <ol class="breadcrumb float-sm-right">
@@ -25,15 +25,25 @@
         <div class="col-7">
           <div class="card">
             <div class="card-body">
-              <form action="<?= base_url("kategori_peta/do_add") ?>" method="post">
+              <form action="<?= base_url('pegawai/do_edit/') . $pegawai['id'] ?>" method="post" enctype="multipart/form-data">
 
                 <div class="form-group">
-                  <label for="nama_kategori">Nama Kategori</label>
-                  <input type="text" class="form-control" id="nama_kategori" name="nama_kategori">
+                  <label for="kode_pegawai">Kode Pegawai</label>
+                  <input type="text" class="form-control" id="kode_pegawai" value="<?= $pegawai['kode_pegawai'] ?>" readonly>
                 </div>
 
                 <div class="form-group">
-                  <button type="submit" class="btn btn-primary btn-block btn-lg">SIMPAN DATA</button>
+                  <label for="nama_pegawai">Nama Pegawai</label>
+                  <input type="text" class="form-control" id="nama_pegawai" name="nama_pegawai" value="<?= $pegawai['nama_pegawai'] ?>">
+                </div>
+
+                <div class="form-group">
+                  <label for="jabatan">Jabatan</label>
+                  <input type="text" class="form-control" id="jabatan" name="jabatan" value="<?= $pegawai['jabatan'] ?>">
+                </div>
+
+                <div class="form-group">
+                  <button type="submit" class="btn btn-primary btn-block btn-lg">SIMPAN PERUBAHAN DATA</button>
                 </div>
               </form>
             </div>

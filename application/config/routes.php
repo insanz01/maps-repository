@@ -107,7 +107,7 @@ $route['kategori_peta/edit/(:any)'] = "PetaController/category_edit/$1";
 $route['kategori_peta/do_edit/(:any)'] = "PetaController/category_do_edit/$1";
 $route['kategori_peta/delete'] = "PetaController/category_delete";
 
-// JABATAN
+// JABATAN [DEPRECATED]
 $route['jabatan'] = "JabatanController/index";
 $route['jabatan/add'] = "JabatanController/add";
 $route['jabatan/do_add'] = "JabatanController/do_add";
@@ -115,3 +115,61 @@ $route['jabatan/detail/(:any)'] = "JabatanController/detail/$1";
 $route['jabatan/edit/(:any)'] = "JabatanController/edit/$1";
 $route['jabatan/do_edit/(:any)'] = "JabatanController/do_edit/$1";
 $route['jabatan/delete'] = "JabatanController/delete";
+
+// REGISTER ===
+// REGISTER PETA
+$route['register_peta'] = "PetaController/register_index";
+$route['register_peta/add'] = "PetaController/register_add";
+$route['register_peta/do_add'] = "PetaController/register_do_add";
+$route['register_peta/detail/(:any)'] = "PetaController/register_detail/$1";
+$route['register_peta/edit/(:any)'] = "PetaController/register_edit/$1";
+$route['register_peta/do_edit/(:any)'] = "PetaController/register_do_edit/$1";
+$route['register_peta/delete'] = "PetaController/register_delete";
+
+// REGISTER PETA RUSAK
+$route['register_peta_rusak'] = "PetaController/register_rusak_index";
+$route['register_peta_rusak/add'] = "PetaController/register_rusak_add";
+$route['register_peta_rusak/do_add'] = "PetaController/register_rusak_do_add";
+$route['register_peta_rusak/detail/(:any)'] = "PetaController/register_rusak_detail/$1";
+$route['register_peta_rusak/edit/(:any)'] = "PetaController/register_rusak_edit/$1";
+$route['register_peta_rusak/do_edit/(:any)'] = "PetaController/register_rusak_do_edit/$1";
+$route['register_peta_rusak/delete'] = "PetaController/register_rusak_delete";
+
+// REGISTER PETA HILANG
+$route['register_peta_hilang'] = "PetaController/register_hilang_index";
+$route['register_peta_hilang/add'] = "PetaController/register_hilang_add";
+$route['register_peta_hilang/do_add'] = "PetaController/register_hilang_do_add";
+$route['register_peta_hilang/detail/(:any)'] = "PetaController/register_hilang_detail/$1";
+$route['register_peta_hilang/edit/(:any)'] = "PetaController/register_hilang_edit/$1";
+$route['register_peta_hilang/do_edit/(:any)'] = "PetaController/register_hilang_do_edit/$1";
+$route['register_peta_hilang/delete'] = "PetaController/register_hilang_delete";
+
+// REGISTER BUKU
+$route['register_buku'] = "BukuController/register_index";
+$route['register_buku/add'] = "BukuController/register_add";
+$route['register_buku/do_add'] = "BukuController/register_do_add";
+$route['register_buku/detail/(:any)'] = "BukuController/register_detail/$1";
+$route['register_buku/edit/(:any)'] = "BukuController/register_edit/$1";
+$route['register_buku/do_edit/(:any)'] = "BukuController/register_do_edit/$1";
+$route['register_buku/delete'] = "BukuController/register_delete";
+
+// REGISTER BUKU RUSAK
+$route['register_buku_rusak'] = "BukuController/register_rusak_index";
+$route['register_buku_rusak/add'] = "BukuController/register_rusak_add";
+$route['register_buku_rusak/do_add'] = "BukuController/register_rusak_do_add";
+$route['register_buku_rusak/detail/(:any)'] = "BukuController/register_rusak_detail/$1";
+$route['register_buku_rusak/edit/(:any)'] = "BukuController/register_rusak_edit/$1";
+$route['register_buku_rusak/do_edit/(:any)'] = "BukuController/register_rusak_do_edit/$1";
+$route['register_buku_rusak/delete'] = "BukuController/register_rusak_delete";
+
+// REGISTER BUKU HILANG
+$route['register_buku_hilang'] = "BukuController/register_hilang_index";
+$route['register_buku_hilang/add'] = "BukuController/register_hilang_add";
+$route['register_buku_hilang/do_add'] = "BukuController/register_hilang_do_add";
+$route['register_buku_hilang/detail/(:any)'] = "BukuController/register_hilang_detail/$1";
+$route['register_buku_hilang/edit/(:any)'] = "BukuController/register_hilang_edit/$1";
+$route['register_buku_hilang/do_edit/(:any)'] = "BukuController/register_hilang_do_edit/$1";
+$route['register_buku_hilang/delete'] = "BukuController/register_hilang_delete";
+
+// LAPORAN
+$route[""] = "LaporanController/buku_masuk";
