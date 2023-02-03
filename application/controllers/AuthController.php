@@ -35,7 +35,6 @@ class AuthController extends CI_Controller
 			$this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert">Kombinasi username dan password tidak tepat</div>');
 		}
 
-
 		redirect('auth');
 	}
 
