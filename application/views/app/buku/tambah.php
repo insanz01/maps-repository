@@ -54,10 +54,10 @@
                   </select>
                 </div>
   
-                <div class="form-group">
+                <!-- <div class="form-group">
                   <label for="file_buku">File Buku</label>
                   <input type="file" class="form-control" id="file_buku" name="file_buku">
-                </div>
+                </div> -->
 
                 <div class="form-group">
                   <button type="submit" class="btn btn-primary btn-block btn-lg">SIMPAN DATA</button>

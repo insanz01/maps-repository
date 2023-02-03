@@ -54,10 +54,10 @@
                   </select>
                 </div>
   
-                <div class="form-group">
+                <!-- <div class="form-group">
                   <label for="file_peta">File Peta</label>
                   <input type="file" class="form-control" id="file_peta" name="file_peta">
-                </div>
+                </div> -->
 
                 <div class="form-group">
                   <label for="link_peta">Link Peta</label>

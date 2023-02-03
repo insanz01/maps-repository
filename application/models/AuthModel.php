@@ -14,9 +14,9 @@ class AuthModel extends CI_Model {
 				return false;
 			}
 			
-			$this->session->set_userdata('SESS_MAP_USERID', $user['id']);
-			$this->session->set_userdata('SESS_MAP_USERNAME', $user['username']);
-			$this->session->set_userdata('SESS_MAP_ROLEID', $user['role_id']);
+			$this->session->set_userdata('SESS_MAP  _USERID', $user['id']);
+			$this->session->set_userdata('SESS_MAP  _USERNAME', $user['username']);
+			$this->session->set_userdata('SESS_MAP  _ROLEID', $user['role_id']);
 			// $this->session->set_userdata('SESS_SIPERPUS_ROLE', $user['role']);
 
 			// if($user['role'] == 3) {
