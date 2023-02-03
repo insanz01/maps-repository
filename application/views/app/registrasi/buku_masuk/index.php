@@ -22,8 +22,11 @@
   <section class="content">
     <div class="container">
       <div class="row">
+        <div class="col-12 mb-3">
+          <a href="<?= base_url("register_buku/add") ?>" class="btn btn-primary float-right">TAMBAH DATA</a>
+        </div>
         <div class="col-12">
-          <table class="table">
+          <table class="table table-print">
             <thead>
               <th>#</th>
               <th>Tanggal</th>
@@ -33,17 +36,20 @@
               <th>Aksi</th>
             </thead>
             <tbody>
+              <?php $nomor = 1 ?>
+              <?php foreach($buku_masuk as $data): ?>
               <tr>
-                <td>1</td>
-                <td>23 Desember 2014</td>
-                <td>PM0001</td>
-                <td>Buku Buta</td>
-                <td>5</td>
+                <td><?= $nomor++ ?></td>
+                <td><?= $data['tanggal'] ?></td>
+                <td><?= $data['kode_buku_masuk'] ?></td>
+                <td><?= $data['nama_buku'] ?></td>
+                <td><?= $data['jumlah'] ?></td>
                 <td>
-                  <a href="#!" class="badge badge-primary badge-sm">Edit</a>
-                  <a href="#!" class="badge badge-danger badge-sm">Hapus</a>
+                  <a href="<?= base_url("buku_masuk/edit/") . $data['id'] ?>" class="badge badge-info badge-sm">Edit</a>
+                  <a href="#!" class="badge badge-danger badge-sm" data-id="<?= $data['id'] ?>" data-toggle="modal" data-target="#hapusModal" onclick="hapusData(this)">Hapus</a>
                 </td>
               </tr>
+              <?php endforeach; ?>
             </tbody>
           </table>
         </div>
@@ -51,3 +57,37 @@
     </div>
   </section>
 </div>
+
+<!-- Modal -->
+<div class="modal fade" id="hapusModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="hapusModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="hapusModalLabel">Hapus Data</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form action="<?= base_url('buku_masuk/delete') ?>" method="post">
+        <div class="modal-body">
+          <input type="hidden" name="id" id="id-delete">
+          <p>
+            Apakah anda yakin ingin menghapus data ini ?
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Tidak</button>
+          <button type="submit" class="btn btn-primary">Ya</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+  const hapusData = (target) => {
+    const id = target.getAttribute("data-id");
+
+    document.getElementById("id-delete").value = id;
+  }
+</script>

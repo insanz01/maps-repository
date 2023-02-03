@@ -5,7 +5,7 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1 class="m-0 text-dark">Tambah Buku Rusak</h1>
+          <h1 class="m-0 text-dark">Tambah Peta Rusak & Hilang</h1>
         </div><!-- /.col -->
         <div class="col-sm-6">
           <!-- <ol class="breadcrumb float-sm-right">
@@ -25,10 +25,10 @@
         <div class="col-7">
           <div class="card">
             <div class="card-body">
-              <form action="#!" method="post" enctype="multipart/form-data">
+              <form action="<?= base_url("register_peta_rusak_hilang/do_add") ?>" method="post" enctype="multipart/form-data">
                 <div class="form-group">
-                  <label for="kode_buku_rusak">Kode Buku Rusak</label>
-                  <input type="text" class="form-control" id="kode_buku_rusak" name="kode_buku_rusak" readonly>
+                  <label for="kode_peta_rusak_hilang">Kode Peta Rusak & Hilang</label>
+                  <input type="text" class="form-control" id="kode_peta_rusak_hilang" name="kode_peta_rusak_hilang" value="<?= $peta_rusak_hilang['kode_peta_rusak_hilang'] ?>" readonly>
                 </div>
   
                 <div class="form-group">
@@ -37,11 +37,11 @@
                 </div>
   
                 <div class="form-group">
-                  <label for="kode_buku">Pilih Buku</label>
-                  <select name="kode_buku" id="kode_buku" class="form-control">
-                    <?php foreach($buku as $data): ?>
+                  <label for="kode_peta">Pilih Peta</label>
+                  <select name="kode_peta" id="kode_peta" class="form-control">
+                    <?php foreach($peta as $data): ?>
                       <option value="<?= $data['id'] ?>">
-                        <?= $data['nama_buku'] ?>
+                        <?= $data['nama_peta'] ?>
                       </option>
                     <?php endforeach; ?>
                   </select>
@@ -53,11 +53,11 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="status_buku">Status Buku</label>
-                  <select name="status_buku" id="status_buku" class="form-control">
+                  <label for="status">Status Peta</label>
+                  <select name="status" id="status" class="form-control">
                     <?php foreach($status as $data): ?>
                       <option value="<?= $data['id'] ?>">
-                        <?= $data['nama'] ?>
+                        <?= $data['nama_status'] ?>
                       </option>
                     <?php endforeach; ?>
                   </select>

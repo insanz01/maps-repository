@@ -90,13 +90,19 @@
             </p>
           </a>
           <ul class="nav nav-treeview">
-          <li class="nav-item">
+            <li class="nav-item">
               <a href="<?= base_url('register_peta') ?>" class="nav-link">
                 <i class="far fa-circle nav-icon ml-3"></i>
                 <p>Peta Masuk</p>
               </a>
             </li>
             <li class="nav-item">
+              <a href="<?= base_url('register_peta_rusak_hilang') ?>" class="nav-link">
+                <i class="far fa-circle nav-icon ml-3"></i>
+                <p>Peta Rusak & Hilang</p>
+              </a>
+            </li>
+            <!-- <li class="nav-item">
               <a href="<?= base_url('register_peta_hilang') ?>" class="nav-link">
                 <i class="far fa-circle nav-icon ml-3"></i>
                 <p>Peta Hilang</p>
@@ -107,14 +113,14 @@
                 <i class="far fa-circle nav-icon ml-3"></i>
                 <p>Peta Rusak</p>
               </a>
-            </li>
+            </li> -->
             <li class="nav-item">
               <a href="<?= base_url('register_buku') ?>" class="nav-link">
                 <i class="far fa-circle nav-icon ml-3"></i>
                 <p>Buku Masuk</p>
               </a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a href="<?= base_url('register_buku_hilang') ?>" class="nav-link">
                 <i class="far fa-circle nav-icon ml-3"></i>
                 <p>Buku Hilang</p>
@@ -124,6 +130,12 @@
               <a href="<?= base_url('register_buku_rusak') ?>" class="nav-link">
                 <i class="far fa-circle nav-icon ml-3"></i>
                 <p>Buku Rusak</p>
+              </a>
+            </li> -->
+            <li class="nav-item">
+              <a href="<?= base_url('register_buku_rusak_hilang') ?>" class="nav-link">
+                <i class="far fa-circle nav-icon ml-3"></i>
+                <p>Buku Rusak & Hilang</p>
               </a>
             </li>
           </ul>

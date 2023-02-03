@@ -5,7 +5,7 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1 class="m-0 text-dark">Peta Masuk</h1>
+          <h1 class="m-0 text-dark">Peta Rusak & Hilang</h1>
         </div><!-- /.col -->
         <div class="col-sm-6">
           <!-- <ol class="breadcrumb float-sm-right">
@@ -23,7 +23,7 @@
     <div class="container">
       <div class="row">
         <div class="col-12 mb-3">
-          <a href="<?= base_url("register_peta/add") ?>" class="btn btn-primary float-right">TAMBAH DATA</a>
+          <a href="<?= base_url("register_peta_rusak_hilang/add") ?>" class="btn btn-primary float-right">TAMBAH DATA</a>
         </div>
         <div class="col-12">
           <table class="table table-print">
@@ -33,18 +33,21 @@
               <th>Kode</th>
               <th>Nama Peta</th>
               <th>Jumlah</th>
+              <th>Status</th>
               <th>Aksi</th>
             </thead>
             <tbody>
               <?php $nomor = 1 ?>
-              <?php foreach($peta_masuk as $data): ?>
+              <?php foreach($peta_rusak_hilang as $data): ?>
               <tr>
                 <td><?= $nomor++ ?></td>
                 <td><?= $data['tanggal'] ?></td>
-                <td><?= $data['kode_peta_masuk'] ?></td>
+                <td><?= $data['kode_peta_rusak_hilang'] ?></td>
                 <td><?= $data['nama_peta'] ?></td>
+                <td><?= $data['jumlah'] ?></td>
+                <td><?= $data['status'] ?></td>
                 <td>
-                  <a href="<?= base_url("register_peta/edit/") . $data['id'] ?>" class="badge badge-info badge-sm">Edit</a>
+                  <a href="<?= base_url("peta_masuk/edit/") . $data['id'] ?>" class="badge badge-info badge-sm">Edit</a>
                   <a href="#!" class="badge badge-danger badge-sm" data-id="<?= $data['id'] ?>" data-toggle="modal" data-target="#hapusModal" onclick="hapusData(this)">Hapus</a>
                 </td>
               </tr>
@@ -57,7 +60,6 @@
   </section>
 </div>
 
-
 <!-- Modal -->
 <div class="modal fade" id="hapusModal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="hapusModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -68,7 +70,7 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <form action="<?= base_url('register_buku/delete') ?>" method="post">
+      <form action="<?= base_url('peta_rusak_hilang/delete') ?>" method="post">
         <div class="modal-body">
           <input type="hidden" name="id" id="id-delete">
           <p>

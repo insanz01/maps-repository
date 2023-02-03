@@ -60,6 +60,11 @@
                 </div>
 
                 <div class="form-group">
+                  <label for="link_peta">Link Peta</label>
+                  <input type="text" class="form-control" id="link_peta" name="link_peta">
+                </div>
+
+                <div class="form-group">
                   <button type="submit" class="btn btn-primary btn-block btn-lg">SIMPAN DATA</button>
                 </div>
               </form>

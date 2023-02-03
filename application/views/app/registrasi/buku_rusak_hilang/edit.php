@@ -5,7 +5,7 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1 class="m-0 text-dark">Tambah Buku Rusak</h1>
+          <h1 class="m-0 text-dark">Edit Buku Rusak & Hilang</h1>
         </div><!-- /.col -->
         <div class="col-sm-6">
           <!-- <ol class="breadcrumb float-sm-right">
@@ -25,22 +25,22 @@
         <div class="col-7">
           <div class="card">
             <div class="card-body">
-              <form action="#!" method="post" enctype="multipart/form-data">
+              <form action="<?= base_url("register_buku_rusak_hilang/do_edit") ?>" method="post" enctype="multipart/form-data">
                 <div class="form-group">
-                  <label for="kode_buku_rusak">Kode Buku Rusak</label>
-                  <input type="text" class="form-control" id="kode_buku_rusak" name="kode_buku_rusak" readonly>
+                  <label for="kode_buku_rusak_hilang">Kode Buku Rusak & Hilang</label>
+                  <input type="text" class="form-control" id="kode_buku_rusak_hilang" name="kode_buku_rusak_hilang" value="<?= $buku_rusak_hilang['kode_buku_rusak_hilang'] ?>" readonly>
                 </div>
   
                 <div class="form-group">
                   <label for="tanggal">Tanggal</label>
-                  <input type="date" class="form-control" id="tanggal" name="tanggal">
+                  <input type="date" class="form-control" id="tanggal" name="tanggal" value="<?= $buku_rusak_hilang['tanggal'] ?>">
                 </div>
   
                 <div class="form-group">
                   <label for="kode_buku">Pilih Buku</label>
                   <select name="kode_buku" id="kode_buku" class="form-control">
                     <?php foreach($buku as $data): ?>
-                      <option value="<?= $data['id'] ?>">
+                      <option value="<?= $data['id'] ?>" <?= ($data['id'] == $buku_rusak_hilang['kode_buku']) ? 'selected' : '' ?>>
                         <?= $data['nama_buku'] ?>
                       </option>
                     <?php endforeach; ?>
@@ -49,27 +49,27 @@
   
                 <div class="form-group">
                   <label for="jumlah">Jumlah</label>
-                  <input type="number" class="form-control" id="jumlah" name="jumlah">
+                  <input type="number" class="form-control" id="jumlah" name="jumlah" value="<?= $buku_rusak_hilang['jumlah'] ?>">
                 </div>
 
                 <div class="form-group">
-                  <label for="status_buku">Status Buku</label>
-                  <select name="status_buku" id="status_buku" class="form-control">
+                  <label for="status">Status Buku</label>
+                  <select name="status" id="status" class="form-control">
                     <?php foreach($status as $data): ?>
-                      <option value="<?= $data['id'] ?>">
-                        <?= $data['nama'] ?>
+                      <option value="<?= $data['id'] ?>" <?= ($data['id'] == $buku_rusak_hilang['status']) ? 'selected' : '' ?>>
+                        <?= $data['nama_status'] ?>
                       </option>
                     <?php endforeach; ?>
                   </select>
                 </div>
 
                 <div class="form-group">
-                  <label for="jumlah">Keterangan</label>
-                  <input type="text" class="form-control" id="keterangan" name="keterangan">
+                  <label for="keterangan">Keterangan</label>
+                  <input type="text" class="form-control" id="keterangan" name="keterangan" value="<?= $buku_rusak_hilang['keterangan'] ?>">
                 </div>
 
                 <div class="form-group">
-                  <button type="submit" class="btn btn-primary btn-block btn-lg">SIMPAN DATA</button>
+                  <button type="submit" class="btn btn-primary btn-block btn-lg">SIMPAN PERUBAHAN DATA</button>
                 </div>
               </form>
             </div>

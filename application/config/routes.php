@@ -144,6 +144,15 @@ $route['register_peta_hilang/edit/(:any)'] = "PetaController/register_hilang_edi
 $route['register_peta_hilang/do_edit/(:any)'] = "PetaController/register_hilang_do_edit/$1";
 $route['register_peta_hilang/delete'] = "PetaController/register_hilang_delete";
 
+// REGISTER PETA RUSAK HILANG
+$route['register_peta_rusak_hilang'] = "PetaController/register_rusak_hilang_index";
+$route['register_peta_rusak_hilang/add'] = "PetaController/register_rusak_hilang_add";
+$route['register_peta_rusak_hilang/do_add'] = "PetaController/register_rusak_hilang_do_add";
+$route['register_peta_rusak_hilang/detail/(:any)'] = "PetaController/register_rusak_hilang_detail/$1";
+$route['register_peta_rusak_hilang/edit/(:any)'] = "PetaController/register_rusak_hilang_edit/$1";
+$route['register_peta_rusak_hilang/do_edit/(:any)'] = "PetaController/register_rusak_hilang_do_edit/$1";
+$route['register_peta_rusak_hilang/delete'] = "PetaController/register_rusak_hilang_delete";
+
 // REGISTER BUKU
 $route['register_buku'] = "BukuController/register_index";
 $route['register_buku/add'] = "BukuController/register_add";
@@ -170,6 +179,15 @@ $route['register_buku_hilang/detail/(:any)'] = "BukuController/register_hilang_d
 $route['register_buku_hilang/edit/(:any)'] = "BukuController/register_hilang_edit/$1";
 $route['register_buku_hilang/do_edit/(:any)'] = "BukuController/register_hilang_do_edit/$1";
 $route['register_buku_hilang/delete'] = "BukuController/register_hilang_delete";
+
+// REGISTER BUKU RUSAK HILANG
+$route['register_buku_rusak_hilang'] = "BukuController/register_rusak_hilang_index";
+$route['register_buku_rusak_hilang/add'] = "BukuController/register_rusak_hilang_add";
+$route['register_buku_rusak_hilang/do_add'] = "BukuController/register_rusak_hilang_do_add";
+$route['register_buku_rusak_hilang/detail/(:any)'] = "BukuController/register_rusak_hilang_detail/$1";
+$route['register_buku_rusak_hilang/edit/(:any)'] = "BukuController/register_rusak_hilang_edit/$1";
+$route['register_buku_rusak_hilang/do_edit/(:any)'] = "BukuController/register_rusak_hilang_do_edit/$1";
+$route['register_buku_rusak_hilang/delete'] = "BukuController/register_rusak_hilang_delete";
 
 // LAPORAN
 $route[""] = "LaporanController/buku_masuk";

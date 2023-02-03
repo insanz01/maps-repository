@@ -70,8 +70,48 @@ class UtilityModel extends CI_Model {
 
         return 'LM_' . $kode;
         break;
+      case 'peta_masuk':
+        if ($last_id == 0) {
+          return 'PM_000001';
+        }
+
+        $kode = $this->build_kode($last_id);
+
+        return 'PM_' . $kode;
+        break;
+      case 'buku_masuk':
+        if ($last_id == 0) {
+          return 'BM_000001';
+        }
+
+        $kode = $this->build_kode($last_id);
+
+        return 'BM_' . $kode;
+        break;
+      case 'peta_rusak_hilang':
+        if ($last_id == 0) {
+          return 'PRH_000001';
+        }
+
+        $kode = $this->build_kode($last_id);
+
+        return 'PRH_' . $kode;
+        break;
+      case 'buku_rusak_hilang':
+        if ($last_id == 0) {
+          return 'BRH_000001';
+        }
+
+        $kode = $this->build_kode($last_id);
+
+        return 'BRH_' . $kode;
+        break;
       default:
         return "XX_XXXXXX";
     }
+  }
+
+  public function get_status() {
+    return $this->db->get("status_barang")->result_array();
   }
 }

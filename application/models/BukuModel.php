@@ -52,4 +52,57 @@ class BukuModel extends CI_Model {
   public function delete_category($id) {
     return $this->db->delete('kategori_buku', ['id' => $id]);
   }
+
+  public function get_all_register() {
+    return $this->db->get('buku_masuk')->result_array();
+  }
+
+  public function get_single_register($id) {
+    return $this->db->get_where('buku_masuk', ['id' => $id])->row_array();
+  }
+
+  public function add_register($data) {
+    return $this->db->insert('buku_masuk', $data);
+  }
+
+  public function edit_register($data, $id) {
+    $this->db->set($data);
+    $this->db->where('id', $id);
+    $this->db->update('buku_masuk');
+
+    return $this->db->affected_rows();
+  }
+
+  public function delete_register($id) {
+    return $this->db->delete('buku_masuk', ['id' => $id]);
+  }
+
+  // rusak hilang
+  public function get_all_rusak_hilang() {
+    $query = "SELECT brh.id, brh.kode_buku_rusak_hilang, brh.kode_buku, b.nama_buku, brh.tanggal, brh.jumlah, sb.nama_status as status, brh.keterangan FROM buku_rusak_hilang brh JOIN buku b ON brh.kode_buku = b.id JOIN status_barang sb ON brh.status = sb.id";
+
+    return $this->db->query($query)->result_array();
+  }
+
+  public function get_single_rusak_hilang($id) {
+    $query = "SELECT brh.id, brh.kode_buku_rusak_hilang, brh.kode_buku, b.nama_buku, brh.tanggal, brh.jumlah, sb.nama_status as status, brh.keterangan FROM buku_rusak_hilang brh JOIN buku b ON brh.kode_buku = b.id JOIN status_barang sb ON brh.status = sb.id WHERE brh.id = $id";
+
+    return $this->db->query($query)->row_array();
+  }
+
+  public function add_rusak_hilang($data) {
+    return $this->db->insert('buku_rusak_hilang', $data);
+  }
+
+  public function edit_rusak_hilang($data, $id) {
+    $this->db->set($data);
+    $this->db->where('id', $id);
+    $this->db->update('buku_rusak_hilang');
+
+    return $this->db->affected_rows();
+  }
+
+  public function delete_rusak_hilang($id) {
+    return $this->db->delete('buku_rusak_hilang', ['id' => $id]);
+  }
 }
