@@ -33,14 +33,17 @@
               <th>Keterangan</th>
             </thead>
             <tbody>
+              <?php $number = 1 ?>
+              <?php foreach($laporan as $data): ?>
               <tr>
-                <td>1</td>
-                <td>2 Februari 2023</td>
-                <td>PM0001</td>
-                <td>Peta Buta</td>
-                <td>5</td>
-                <td>Tidak ada keterangan</td>
+                <td><?= $number++ ?></td>
+                <td><?= $data['tanggal'] ?></td>
+                <td><?= $data['kode_peta_rusak_hilang'] ?></td>
+                <td><?= $data['nama_peta'] ?></td>
+                <td><?= $data['jumlah'] ?></td>
+                <td><?= $data['keterangan'] ?></td>
               </tr>
+              <?php endforeach; ?>
             </tbody>
           </table>
         </div>

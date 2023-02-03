@@ -70,18 +70,22 @@ class LaporanController extends CI_Controller {
   }
 
   public function peta_hilang() {
+    $data['laporan'] = $this->laporan_m->get_all_peta_hilang();
+
     $this->load->view("templates/panel/header");
     $this->load->view("templates/panel/sidebar");
     $this->load->view("templates/panel/navbar");
-    $this->load->view("app/laporan/peta_hilang/index");
+    $this->load->view("app/laporan/peta_hilang/index", $data);
     $this->load->view("templates/panel/footer");
   }
 
   public function peta_rusak() {
+    $data['laporan'] = $this->laporan_m->get_all_peta_rusak();
+
     $this->load->view("templates/panel/header");
     $this->load->view("templates/panel/sidebar");
     $this->load->view("templates/panel/navbar");
-    $this->load->view("app/laporan/peta_rusak/index");
+    $this->load->view("app/laporan/peta_rusak/index", $data);
     $this->load->view("templates/panel/footer");
   }
 }
