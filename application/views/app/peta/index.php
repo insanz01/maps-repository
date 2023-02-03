@@ -31,7 +31,7 @@
               <th>#</th>
               <th>Kode Peta</th>
               <th>Nama Peta</th>
-              <th>File</th>
+              <th>Link Peta</th>
               <th>Aksi</th>
             </thead>
             <tbody>
@@ -42,8 +42,8 @@
                 <td><?= $data['kode_peta'] ?></td>
                 <td><?= $data['nama_peta'] ?></td>
                 <td>
-                  <a href="<?= base_url('uploads/peta/') . $data['file'] ?>" download>
-                    <i class="fas fa-fw fa-download"></i>
+                  <a href="<?= $data['link_peta'] ?>" target="_blank">
+                    <i class="fas fa-fw fa-map"></i>
                   </a>
                 </td>
                 <td>
