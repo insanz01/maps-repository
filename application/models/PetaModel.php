@@ -54,11 +54,15 @@ class PetaModel extends CI_Model {
   }
 
   public function get_all_register() {
-    return $this->db->get('peta_masuk')->result_array();
+    $query = "SELECT pm.id, pm.kode_peta_masuk, p.nama_peta, pm.tanggal, pj.nama_pegawai, pm.jumlah FROM peta_masuk pm JOIN peta p ON pm.kode_peta = p.id JOIN pegawai pj ON pm.penanggung_jawab = pj.id";
+
+    return $this->db->query($query)->result_array();
   }
 
   public function get_single_register($id) {
-    return $this->db->get_where('peta_masuk', ['id' => $id])->row_array();
+    $query = "SELECT pm.id, pm.kode_peta_masuk, p.nama_peta, pm.tanggal, pj.nama_pegawai, pm.jumlah FROM peta_masuk pm JOIN peta p ON pm.kode_peta = p.id JOIN pegawai pj ON pm.penanggung_jawab = pj.id WHERE pm.id = $id";
+
+    return $this->db->query($query)->row_array();
   }
 
   public function add_register($data) {
@@ -79,13 +83,13 @@ class PetaModel extends CI_Model {
   
   // rusak hilang
   public function get_all_rusak_hilang() {
-    $query = "SELECT brh.id, brh.kode_peta_rusak_hilang, brh.kode_peta, b.nama_peta, brh.tanggal, brh.jumlah, sb.nama_status as status, brh.keterangan FROM peta_rusak_hilang brh JOIN peta b ON brh.kode_peta = b.id JOIN status_barang sb ON brh.status = sb.id";
+    $query = "SELECT prh.id, prh.kode_peta_rusak_hilang, prh.kode_peta, b.nama_peta, prh.tanggal, prh.jumlah, sb.nama_status as status, prh.keterangan FROM peta_rusak_hilang prh JOIN peta b ON prh.kode_peta = b.id JOIN status_barang sb ON prh.status = sb.id";
 
     return $this->db->query($query)->result_array();
   }
 
   public function get_single_rusak_hilang($id) {
-    $query = "SELECT brh.id, brh.kode_peta_rusak_hilang, brh.kode_peta, b.nama_peta, brh.tanggal, brh.jumlah, sb.nama_status as status, brh.keterangan FROM peta_rusak_hilang brh JOIN peta b ON brh.kode_peta = b.id JOIN status_barang sb ON brh.status = sb.id WHERE brh.id = $id";
+    $query = "SELECT prh.id, prh.kode_peta_rusak_hilang, prh.kode_peta, b.nama_peta, prh.tanggal, prh.jumlah, sb.nama_status as status, prh.keterangan FROM peta_rusak_hilang prh JOIN peta b ON prh.kode_peta = b.id JOIN status_barang sb ON prh.status = sb.id WHERE prh.id = $id";
 
     return $this->db->query($query)->row_array();
   }

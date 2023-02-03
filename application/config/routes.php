@@ -190,4 +190,12 @@ $route['register_buku_rusak_hilang/do_edit/(:any)'] = "BukuController/register_r
 $route['register_buku_rusak_hilang/delete'] = "BukuController/register_rusak_hilang_delete";
 
 // LAPORAN
-$route[""] = "LaporanController/buku_masuk";
+$route["laporan/buku"] = "LaporanController/buku";
+$route["laporan/buku_masuk"] = "LaporanController/buku_masuk";
+$route["laporan/buku_rusak"] = "LaporanController/buku_rusak";
+$route["laporan/buku_hilang"] = "LaporanController/buku_hilang";
+
+$route["laporan/peta"] = "LaporanController/peta";
+$route["laporan/peta_masuk"] = "LaporanController/peta_masuk";
+$route["laporan/peta_rusak"] = "LaporanController/peta_rusak";
+$route["laporan/peta_hilang"] = "LaporanController/peta_hilang";

@@ -43,6 +43,7 @@
                 <td><?= $data['tanggal'] ?></td>
                 <td><?= $data['kode_peta_masuk'] ?></td>
                 <td><?= $data['nama_peta'] ?></td>
+                <td><?= $data['jumlah'] ?></td>
                 <td>
                   <a href="<?= base_url("register_peta/edit/") . $data['id'] ?>" class="badge badge-info badge-sm">Edit</a>
                   <a href="#!" class="badge badge-danger badge-sm" data-id="<?= $data['id'] ?>" data-toggle="modal" data-target="#hapusModal" onclick="hapusData(this)">Hapus</a>

@@ -151,49 +151,49 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="<?= base_url('menu') ?>" class="nav-link">
+              <a href="<?= base_url('laporan/peta') ?>" class="nav-link">
                 <i class="far fa-circle nav-icon ml-3"></i>
                 <p>Peta</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="<?= base_url('menu') ?>" class="nav-link">
+              <a href="<?= base_url('laporan/buku') ?>" class="nav-link">
                 <i class="far fa-circle nav-icon ml-3"></i>
                 <p>Buku</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="<?= base_url('menu') ?>" class="nav-link">
+              <a href="<?= base_url('laporan/peta_masuk') ?>" class="nav-link">
                 <i class="far fa-circle nav-icon ml-3"></i>
                 <p>Peta Masuk</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="<?= base_url('menu') ?>" class="nav-link">
+              <a href="<?= base_url('laporan/peta_rusak') ?>" class="nav-link">
                 <i class="far fa-circle nav-icon ml-3"></i>
                 <p>Peta Rusak</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="<?= base_url('menu') ?>" class="nav-link">
+              <a href="<?= base_url('laporan/peta_hilang') ?>" class="nav-link">
                 <i class="far fa-circle nav-icon ml-3"></i>
                 <p>Peta Hilang</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="<?= base_url('menu') ?>" class="nav-link">
+              <a href="<?= base_url('laporan/buku_)masuk') ?>" class="nav-link">
                 <i class="far fa-circle nav-icon ml-3"></i>
                 <p>Buku Masuk</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="<?= base_url('menu') ?>" class="nav-link">
+              <a href="<?= base_url('laporan/buku_)rusak') ?>" class="nav-link">
                 <i class="far fa-circle nav-icon ml-3"></i>
                 <p>Buku Rusak</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="<?= base_url('menu') ?>" class="nav-link">
+              <a href="<?= base_url('laporan/buku_)hilang') ?>" class="nav-link">
                 <i class="far fa-circle nav-icon ml-3"></i>
                 <p>Buku Hilang</p>
               </a>

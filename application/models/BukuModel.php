@@ -54,11 +54,15 @@ class BukuModel extends CI_Model {
   }
 
   public function get_all_register() {
-    return $this->db->get('buku_masuk')->result_array();
+    $query = "SELECT bm.id, bm.kode_buku_masuk, p.nama_buku, bm.tanggal, pj.nama_pegawai, bm.jumlah FROM buku_masuk bm JOIN buku p ON bm.kode_buku = p.id JOIN pegawai pj ON bm.penanggung_jawab = pj.id";
+
+    return $this->db->query($query)->result_array();
   }
 
   public function get_single_register($id) {
-    return $this->db->get_where('buku_masuk', ['id' => $id])->row_array();
+    $query = "SELECT bm.id, bm.kode_buku_masuk, p.nama_buku, bm.tanggal, pj.nama_pegawai, bm.jumlah FROM buku_masuk bm JOIN buku p ON bm.kode_buku = p.id JOIN pegawai pj ON bm.penanggung_jawab = pj.id WHERE bm.id = $id";
+
+    return $this->db->query($query)->row_array();
   }
 
   public function add_register($data) {

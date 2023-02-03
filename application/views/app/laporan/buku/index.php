@@ -32,13 +32,16 @@
               <th>Lemari</th>
             </thead>
             <tbody>
+              <?php $number = 1 ?>
+              <?php foreach($laporan as $data): ?>
               <tr>
-                <td>1</td>
-                <td>PM0001</td>
-                <td>Buku Buta</td>
-                <td>Kategori 1</td>
-                <td>Lemari 5</td>
+                <td><?= $number++ ?></td>
+                <td><?= $data['kode_buku'] ?></td>
+                <td><?= $data['nama_buku'] ?></td>
+                <td><?= $data['kategori_buku'] ?></td>
+                <td><?= $data['lemari_buku'] ?></td>
               </tr>
+              <?php endforeach; ?>
             </tbody>
           </table>
         </div>
