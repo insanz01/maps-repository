@@ -38,7 +38,7 @@
               <tr>
                 <td><?= $number++ ?></td>
                 <td><?= $data['tanggal'] ?></td>
-                <td><?= $data['kode_buku'] ?></td>
+                <td><?= $data['kode_buku_rusak_hilang'] ?></td>
                 <td><?= $data['nama_buku'] ?></td>
                 <td><?= $data['jumlah'] ?></td>
                 <td><?= $data['keterangan'] ?></td>

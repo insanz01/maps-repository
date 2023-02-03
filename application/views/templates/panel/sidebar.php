@@ -181,7 +181,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="<?= base_url('laporan/buku_)masuk') ?>" class="nav-link">
+              <a href="<?= base_url('laporan/buku_masuk') ?>" class="nav-link">
                 <i class="far fa-circle nav-icon ml-3"></i>
                 <p>Buku Masuk</p>
               </a>
