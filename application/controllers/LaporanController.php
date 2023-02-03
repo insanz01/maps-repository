@@ -19,10 +19,12 @@ class LaporanController extends CI_Controller {
   }
 
   public function buku_masuk() {
+    $data['laporan'] = $this->laporan_m->get_all_buku_masuk();
+
     $this->load->view("templates/panel/header");
     $this->load->view("templates/panel/sidebar");
     $this->load->view("templates/panel/navbar");
-    $this->load->view("app/laporan/buku_masuk/index");
+    $this->load->view("app/laporan/buku_masuk/index", $data);
     $this->load->view("templates/panel/footer");
   }
 
@@ -58,10 +60,12 @@ class LaporanController extends CI_Controller {
   }
 
   public function peta_masuk() {
+    $data['laporan'] = $this->laporan_m->get_all_peta_masuk();
+
     $this->load->view("templates/panel/header");
     $this->load->view("templates/panel/sidebar");
     $this->load->view("templates/panel/navbar");
-    $this->load->view("app/laporan/peta_masuk/index");
+    $this->load->view("app/laporan/peta_masuk/index", $data);
     $this->load->view("templates/panel/footer");
   }
 

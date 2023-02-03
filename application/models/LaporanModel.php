@@ -13,7 +13,7 @@ class LaporanModel extends CI_Model {
   }
 
   public function get_all_buku_masuk() {
-    $query = "SELECT * FROM buku_masuk";
+    $query = "SELECT pm.id, pm.kode_buku_masuk, p.nama_buku, pm.tanggal, pm.jumlah, pj.nama_pegawai FROM buku_masuk pm JOIN buku p ON pm.kode_buku = p.id JOIN pegawai pj ON pm.penanggung_jawab = pj.id";
 
     return $this->db->query($query)->result_array();
   }
@@ -38,7 +38,7 @@ class LaporanModel extends CI_Model {
   }
 
   public function get_all_peta_masuk() {
-    $query = "SELECT * FROM peta_masuk";
+    $query = "SELECT pm.id, pm.kode_peta_masuk, p.nama_peta, pm.tanggal, pm.jumlah, pj.nama_pegawai FROM peta_masuk pm JOIN peta p ON pm.kode_peta = p.id JOIN pegawai pj ON pm.penanggung_jawab = pj.id";
 
     return $this->db->query($query)->result_array();
   }
