@@ -27,7 +27,7 @@ class LaporanController extends CI_Controller {
   }
 
   public function buku_hilang() {
-    $data['laporan'] = $this->laporan_m->get_all_buku();
+    $data['laporan'] = $this->laporan_m->get_all_buku_hilang();
 
     $this->load->view("templates/panel/header");
     $this->load->view("templates/panel/sidebar");

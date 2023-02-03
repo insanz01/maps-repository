@@ -187,13 +187,13 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="<?= base_url('laporan/buku_)rusak') ?>" class="nav-link">
+              <a href="<?= base_url('laporan/buku_rusak') ?>" class="nav-link">
                 <i class="far fa-circle nav-icon ml-3"></i>
                 <p>Buku Rusak</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="<?= base_url('laporan/buku_)hilang') ?>" class="nav-link">
+              <a href="<?= base_url('laporan/buku_hilang') ?>" class="nav-link">
                 <i class="far fa-circle nav-icon ml-3"></i>
                 <p>Buku Hilang</p>
               </a>
