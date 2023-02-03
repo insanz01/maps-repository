@@ -31,7 +31,7 @@
               <th>#</th>
               <th>Kode Buku</th>
               <th>Nama Buku</th>
-              <th>File</th>
+              <!-- <th>File</th> -->
               <th>Aksi</th>
             </thead>
             <tbody>
@@ -41,11 +41,11 @@
                 <td><?= $nomor++ ?></td>
                 <td><?= $data['kode_buku'] ?></td>
                 <td><?= $data['nama_buku'] ?></td>
-                <td>
+                <!-- <td>
                   <a href="<?= base_url("uploads/buku/") . $data['file'] ?>" download>
                     <i class="fas fa-fw fa-download"></i>
                   </a>
-                </td>
+                </td> -->
                 <td>
                   <a href="<?= base_url("buku/edit/") . $data['id'] ?>" class="badge badge-info badge-sm">Edit</a>
                   <a href="#!" class="badge badge-danger badge-sm" data-id="<?= $data['id'] ?>" data-toggle="modal" data-target="#hapusModal" onclick="hapusData(this)">Hapus</a>
